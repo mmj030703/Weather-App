@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #3b3838;
+    color: #fff;
+}
+
+.weather_app_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to bottom, #04d66d 50%, #5212c7);
+    max-width: 400px;
+    margin: 2.8rem auto;
+    border-radius: .7rem;
+    padding: 1.5rem 1rem 2.3rem;
+}
+
+.weather_app_container .weather_app_header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    column-gap: 1rem;
+}
+
+.weather_app_container .weather_app_header input {
+    outline: none;
+    border: none;
+    padding: .6rem 1rem;
+    border-radius: 1.5rem;
+    font-size: 1rem;
+    width: 100%;
+}
+
+.weather_app_container .weather_app_header button {
+    outline: none;
+    border: none;
+    font-size: 1rem;
+    border-radius: 50%;
+    padding: .8rem .8rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.weather_app_container .weather_app_header button img {
+    width: 16px;
+}
+
+.weather_app_container main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+
+.weather_app_container .temperature_details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.weather_app_container .temperature_details .temperature_image {
+    width: 180px;
+}
+
+.weather_app_container .temperature_details .temperature {
+    font-size: 3.5rem;
+}
+
+.weather_app_container .temperature_details .city_name {
+    font-size: 2rem;
+}
+
+.weather_app_container .other_details {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.weather_app_container .other_details .humidity,
+.weather_app_container .other_details .wind {
+    display: flex;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+
+.weather_app_container .other_details .humidity img,
+.weather_app_container .other_details .wind img {
+    width: 40px;
+    height: 50px;
+}
+
+.notfound {
+    display: none;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+@media screen and (max-width: 450px) {
+    html {
+        font-size: 11px;
+    }
+
+    .weather_app_container {
+        max-width: 300px;
+    }
+
+    .weather_app_container .weather_app_header input {
+        font-size: 15px;
+        border-radius: 2rem;
+    }
+
+    .weather_app_container .temperature_details .temperature_image {
+        width: 150px;
+    }
+
+    .weather_app_container .other_details .humidity .humidity_details .humidity_value,
+    .weather_app_container .other_details .wind .wind_details .wind_speed {
+        font-size: 17px;
+    }   
+}
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 9px;
+    }
+
+    body {
+        padding: 0rem 2rem;
+    }
+
+    .weather_app_container {
+        max-width: 280px;
+    }
+
+    .weather_app_container .temperature_details .temperature_image {
+        width: 150px;
+    }
+}
